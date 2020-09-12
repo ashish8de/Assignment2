@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+  	<parameter name="configFile" value="test-resource\\Configuration.properties"/>
+	<!-- UserCredentials.properties must contains property
+		EmailAddress
+		EncyptedPassword
+	-->
+    <parameter name="credentials" value="test-resource\\UserCredentials.properties"/>
+  	<classes>
+    	<class name="test.testcases.ExpensiveItemInCart"/>
+  	</classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
