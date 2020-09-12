@@ -5,7 +5,7 @@
   	<parameter name="configFile" value="test-resource\\Configuration.properties"/>
 	<!-- UserCredentials.properties must contains property
 		EmailAddress
-		EncyptedPassword
+		EncyptedPassword (Base64 encoded)
 	-->
     <parameter name="credentials" value="test-resource\\UserCredentials.properties"/>
   	<classes>
