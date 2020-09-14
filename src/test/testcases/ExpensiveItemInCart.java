@@ -49,13 +49,11 @@ public class ExpensiveItemInCart {
 		  //Navigate to login page
 		  home.signIn();
 		  
-		  ExternalData credentials = new ExternalData(userCredentials);
-		  
 		  LoginPage login = new LoginPage(driver, or);
 		  //Verify if login page is loaded
 		  Assert.assertTrue(login.isPageDisplayed(), "Login Page had not loaded correctly");
 		  //Login to application
-		  login.login(credentials);
+		  login.login();
 	  }
 	  //Verify if user login is successful
 	  Assert.assertTrue(home.isUserLoggedIn(), "User Login was not successful");
