@@ -3,13 +3,8 @@
 <suite name="Suite">
   <test name="Test">
   	<parameter name="configFile" value="test-resource\\Configuration.properties"/>
-	<!-- UserCredentials.properties must contains property
-		EmailAddress
-		EncyptedPassword (Base64 encoded)
-	-->
-    <parameter name="credentials" value="test-resource\\UserCredentials.properties"/>
   	<classes>
-    	<class name="test.testcases.ExpensiveItemInCart"/>
+    		<class name="test.testcases.ExpensiveItemInCart"/>
   	</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
