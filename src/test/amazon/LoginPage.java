@@ -40,13 +40,11 @@ public class LoginPage {
 	}
 
 	//Login to application
-	public void login(ExternalData credentials) {
-		
-		String emailAddress = credentials.getValue("Username");
-		String encyptedPassword = credentials.getValue("EncyptedPassword");
+	//Using Environmental variable to pass login creadential
+	public void login() {
 		
 		//Enter email id and click on continue button
-		driver.findElement(emailTextbox).sendKeys(emailAddress);
+		driver.findElement(emailTextbox).sendKeys(System.getenv("EmailAddress"));
 		driver.findElement(continueButton).click();
 		
 		//Wait for password field to enable
@@ -55,7 +53,7 @@ public class LoginPage {
 			.until(ExpectedConditions.visibilityOfAllElements(ele));
 		
 		//Enter password and click on signin button
-		ele.sendKeys(new String(Base64.getDecoder().decode(encyptedPassword.getBytes())));
+		ele.sendKeys(new String(Base64.getDecoder().decode(System.getenv("EncyptedPassword").getBytes())));
 		driver.findElement(signInButton).click();
 		
 		Reporter.log("User signin request was sent.");
