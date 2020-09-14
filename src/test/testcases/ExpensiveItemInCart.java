@@ -41,9 +41,7 @@ public class ExpensiveItemInCart {
   }
   
   @Test(priority = 1, enabled = false) //Test disabled as Amazon security OTP is required
-  @Parameters("credentials")	//Update credentials parameter in testng.xml
-  public void login_to_application(String userCredentials) {
-	  
+  public void login_to_application() {
 	  HomePage home = new HomePage(driver, or);
 	  
 	  //Login to application if not already logged in
